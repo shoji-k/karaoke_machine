@@ -1,3 +1,5 @@
+# 出典： https://gist.github.com/JunichiIto/c548e39fed60bf4bd36a
+
 # coding: utf-8
 require './KaraokeMachine.rb'
 
