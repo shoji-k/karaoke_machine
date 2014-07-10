@@ -13,7 +13,7 @@ class KaraokeMachine
 
   def change_key(key, updown)
     # return not key
-    return key if key =~ / |\|/
+    return key if key =~ /\s|\|/
 
     # get index by key
     idx = KEYS.index(key)
