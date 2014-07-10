@@ -1,3 +1,4 @@
+# TODO filename should be karaoke_machine.rb
 class KaraokeMachine
   KEYS = %w(C C# D D# E F F# G G# A A# B)
 
