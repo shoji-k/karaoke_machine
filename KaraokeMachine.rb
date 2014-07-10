@@ -1,7 +1,8 @@
 class KaraokeMachine
+  KEYS = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
+
   def initialize(melody)
     @melody = melody
-    @keys = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
   end
   def transpose(amount)
     @melody.scan(/[A-G|\s]#?/).map {|key|
@@ -16,12 +17,12 @@ class KaraokeMachine
     return key if key =~ / |\|/
 
     # get index by key
-    idx = @keys.index(key)
+    idx = KEYS.index(key)
 
     # change key
-    changed_idx = (idx + updown) % @keys.length
+    changed_idx = (idx + updown) % KEYS.length
 
-    @keys[changed_idx]
+    KEYS[changed_idx]
   end
 
 end
