@@ -4,6 +4,7 @@ class KaraokeMachine
   def initialize(melody)
     @melody = melody
   end
+
   def transpose(amount)
     @melody.scan(/[A-G|\s]#?/).map {|key|
       change_key(key, amount)
@@ -11,8 +12,8 @@ class KaraokeMachine
   end
 
   private
-  def change_key(key, updown)
 
+  def change_key(key, updown)
     # return not key
     return key if key =~ / |\|/
 
@@ -24,6 +25,5 @@ class KaraokeMachine
 
     KEYS[changed_idx]
   end
-
 end
 
