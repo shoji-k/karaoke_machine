@@ -21,4 +21,3 @@ class KaraokeMachine
     KEYS[changed_idx]
   end
 end
-
