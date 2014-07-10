@@ -13,8 +13,7 @@ class KaraokeMachine
   def keychanger(key, updown)
 
     # return not key
-    return key if key == "|"
-    return key if key == " "
+    return key if key =~ / |\|/
 
     # get index by key
     idx = @keys.index(key)
