@@ -5,12 +5,12 @@ class KaraokeMachine
   end
   def transpose(amount)
     @melody.scan(/[A-G|\s]#?/).map {|key|
-      keychanger(key, amount)
+      change_key(key, amount)
     }.join
   end
 
   private
-  def keychanger(key, updown)
+  def change_key(key, updown)
 
     # return not key
     return key if key =~ / |\|/
