@@ -1,5 +1,5 @@
 class KaraokeMachine
-  KEYS = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
+  KEYS = %w(C C# D D# E F F# G G# A A# B)
 
   def initialize(melody)
     @melody = melody
