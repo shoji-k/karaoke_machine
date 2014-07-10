@@ -12,13 +12,9 @@ class KaraokeMachine
   private
 
   def change_key(key, updown)
-    # return not key
     return key if key =~ /\s|\|/
 
-    # get index by key
     idx = KEYS.index(key)
-
-    # change key
     changed_idx = (idx + updown) % KEYS.length
 
     KEYS[changed_idx]
