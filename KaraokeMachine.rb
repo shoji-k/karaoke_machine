@@ -20,10 +20,9 @@ class KaraokeMachine
     idx = @keys.index(key)
 
     # change key
-    idx += updown
-    idx = idx % @keys.length
+    changed_idx = (idx + updown) % @keys.length
 
-    return @keys[idx]
+    @keys[changed_idx]
   end
 
 end
