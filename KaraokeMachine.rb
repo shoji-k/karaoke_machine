@@ -16,9 +16,6 @@ class KaraokeMachine
     return key if key == "|"
     return key if key == " "
 
-    # skip
-    return key if updown == 0
-
     # get index by key
     idx = -1
     @keys.each_with_index do |doremi,i|
