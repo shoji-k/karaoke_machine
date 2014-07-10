@@ -4,13 +4,9 @@ class KaraokeMachine
     @keys = ['C','C#','D','D#','E','F','F#','G','G#','A','A#','B']
   end
   def transpose(amount)
-    result = []
-    @melody.scan(/[A-G|\s]#?/).each do |key|
-      result << keychanger(key, amount)
-    end
-
-    return result.join("")
-
+    @melody.scan(/[A-G|\s]#?/).map {|key|
+      keychanger(key, amount)
+    }.join
   end
 
   private
