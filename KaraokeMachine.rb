@@ -17,13 +17,7 @@ class KaraokeMachine
     return key if key == " "
 
     # get index by key
-    idx = -1
-    @keys.each_with_index do |doremi,i|
-      if doremi == key
-        idx = i
-        break
-      end
-    end
+    idx = @keys.index(key)
 
     # change key
     idx += updown
