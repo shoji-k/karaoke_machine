@@ -6,9 +6,7 @@ class KaraokeMachine
   end
 
   def transpose(amount)
-    @melody.scan(/[A-G|\s]#?/).map {|key|
-      change_key(key, amount)
-    }.join
+    @melody.scan(/[A-G|\s]#?/).map{|key| change_key(key, amount) }.join
   end
 
   private
